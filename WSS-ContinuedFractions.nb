@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10571,        282]
-NotebookOptionsPosition[      8567,        232]
-NotebookOutlinePosition[      9534,        265]
-CellTagsIndexPosition[      9467,        260]
+NotebookDataLength[     12071,        322]
+NotebookOptionsPosition[      9753,        267]
+NotebookOutlinePosition[     10721,        300]
+CellTagsIndexPosition[     10653,        295]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,7 +61,6 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    SubscriptBox["a", "0"], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->18,ExpressionUUID->"9fac1183-7f56-4517-b4ca-42bf7e3ff421"],
  StyleBox[" + ",
   FontSize->18],
@@ -74,7 +73,6 @@ Cell[TextData[{
       RowBox[{
        RowBox[{
         SubscriptBox["a", "2"], "+"}], "..."}]]}]], TraditionalForm]],
-  FormatType->"TraditionalForm",
   FontSize->18,ExpressionUUID->"55f04796-9dc5-4be0-9c14-9effabdeb393"]
 }], "Text",
  CellChangeTimes->{{3.770484785831618*^9, 3.770484787531086*^9}, {
@@ -97,20 +95,17 @@ Cell[TextData[{
  ", continued fraction. The numbers {",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "0"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "0"], TraditionalForm]],ExpressionUUID->
   "66efc3a3-430b-4a18-a0d1-7021c49d75be"],
  ", ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "1"], TraditionalForm]],ExpressionUUID->
   "514a23fa-92df-4c75-ad04-7c47dbbe01ee"],
  ", ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "2"], TraditionalForm]],ExpressionUUID->
   "926d7291-a249-4caf-836e-ea9b810c08cf"],
  ", ...} are called the ",
  StyleBox["coefficients",
@@ -120,22 +115,19 @@ domain. For simplicity in what follows we shall assume that the coefficients \
 are positive integers. It is also convenient to introduce the notation [",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "0"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "0"], TraditionalForm]],ExpressionUUID->
   "86389ced-e653-480e-8ca5-4083f0614400"],
  "; ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "1"], TraditionalForm]],ExpressionUUID->
   "7eb80602-769a-43b7-a4d6-b4da1d82ac71"],
  ", ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["a", "2"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["a", "2"], TraditionalForm]],ExpressionUUID->
   "c4d39a8a-eefb-4f8d-beba-bd4b2df21f4b"],
- ", ...]"
+ ", ...] to avoid the unwieldy nested fractions."
 }], "Text",
  CellChangeTimes->{{3.770484785831618*^9, 3.770484787531086*^9}, {
    3.7704848369826345`*^9, 3.7704848610263457`*^9}, 3.7704849491355906`*^9, {
@@ -143,7 +135,8 @@ are positive integers. It is also convenient to introduce the notation [",
    3.7704854478699913`*^9}, 3.770485583269272*^9, {3.77048562290324*^9, 
    3.7704856417927074`*^9}, {3.770491674049889*^9, 3.770491717108697*^9}, {
    3.770491990417308*^9, 3.7704921316810513`*^9}, {3.77050939940336*^9, 
-   3.77050940226873*^9}, 3.7705100378069177`*^9},
+   3.77050940226873*^9}, 3.7705100378069177`*^9, {3.7705112844674797`*^9, 
+   3.7705113149310193`*^9}},
  TextAlignment->Left,ExpressionUUID->"bcdcdc72-8db7-4e1b-8dcf-99b64734e334"],
 
 Cell[BoxData[""], "Input",
@@ -222,11 +215,53 @@ Cell["Khinchin\[CloseCurlyQuote]s Constant", "Section",
 a4407a7cb6e5"],
 
 Cell["\<\
-In this section we focus on properties of infinite continued fractions.\
+In this section we focus on properties of infinite continued fractions. Some \
+well known mathematical constants have very elegant continued fractions, for \
+example:\
 \>", "Text",
- CellChangeTimes->{{3.7705106872483644`*^9, 
-  3.7705107441032696`*^9}},ExpressionUUID->"b683e5ef-1cc0-49da-be5d-\
-95fe9eac5514"]
+ CellChangeTimes->{{3.7705106872483644`*^9, 3.7705107441032696`*^9}, {
+  3.77051114110999*^9, 
+  3.770511206582883*^9}},ExpressionUUID->"b683e5ef-1cc0-49da-be5d-\
+95fe9eac5514"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ContinuedFraction", "[", "GoldenRatio", "]"}]], "Input",
+ CellChangeTimes->{{3.770511209514989*^9, 3.7705112152905507`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"be529e3b-13c3-487b-8b21-31fa9315b033"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   RowBox[{"{", "1", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.770511215811146*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"3589d148-1912-4288-bf2a-639b4a2e3858"]
+}, Open  ]],
+
+Cell[TextData[{
+ "which in our notation can be written as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"1", ";", "1"}], ",", "1", ",", "1", ",", "..."}], "]"}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "a0b8eedb-6ce6-409d-8d27-ba2a8032d7bd"],
+ ", or [",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", ";", 
+    OverscriptBox["1", "-"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "6f9be686-3170-41b4-9c13-7d498ab40998"],
+ "]. It is also known that "
+}], "Text",
+ CellChangeTimes->{{3.7705112447617044`*^9, 3.7705112587313347`*^9}, {
+  3.7705114041133895`*^9, 
+  3.7705115497888236`*^9}},ExpressionUUID->"2ecc2768-d81d-45c9-9946-\
+0ed0f5a722b9"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -259,7 +294,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 9328, 254}
+ {"Title", 10514, 289}
  }
 *)
 (*NotebookFileOutline
@@ -271,17 +306,22 @@ Cell[1012, 30, 537, 8, 53, "Subtitle",ExpressionUUID->"94536f76-3fd2-4bf6-b228-f
 Cell[CellGroupData[{
 Cell[1574, 42, 404, 5, 67, "Section",ExpressionUUID->"c118bb02-e7a5-4344-a96c-0a8c9cb5a937"],
 Cell[1981, 49, 609, 8, 34, "Text",ExpressionUUID->"cef6a0ba-b89b-4bd9-9566-70b53195f786"],
-Cell[2593, 59, 1143, 28, 52, "Text",ExpressionUUID->"2813800a-7e90-4369-ab42-397cf3161143"],
-Cell[3739, 89, 2082, 57, 56, "Text",ExpressionUUID->"bcdcdc72-8db7-4e1b-8dcf-99b64734e334"],
-Cell[5824, 148, 207, 4, 28, "Input",ExpressionUUID->"fa31704b-ed1a-48b1-9a99-cedb103f859d"]
+Cell[2593, 59, 1077, 26, 52, "Text",ExpressionUUID->"2813800a-7e90-4369-ab42-397cf3161143"],
+Cell[3673, 87, 1978, 52, 56, "Text",ExpressionUUID->"bcdcdc72-8db7-4e1b-8dcf-99b64734e334"],
+Cell[5654, 141, 207, 4, 28, "Input",ExpressionUUID->"fa31704b-ed1a-48b1-9a99-cedb103f859d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6068, 157, 177, 3, 67, "Section",ExpressionUUID->"c488e2e5-09cd-4b8e-8253-0516bdf7d724"],
-Cell[6248, 162, 1843, 51, 66, "Text",ExpressionUUID->"132479e8-9371-4a76-a40a-8fb0798b2d8b"]
+Cell[5898, 150, 177, 3, 67, "Section",ExpressionUUID->"c488e2e5-09cd-4b8e-8253-0516bdf7d724"],
+Cell[6078, 155, 1843, 51, 66, "Text",ExpressionUUID->"132479e8-9371-4a76-a40a-8fb0798b2d8b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8128, 218, 183, 3, 67, "Section",ExpressionUUID->"3ace0394-c053-4c68-84eb-a4407a7cb6e5"],
-Cell[8314, 223, 225, 5, 34, "Text",ExpressionUUID->"b683e5ef-1cc0-49da-be5d-95fe9eac5514"]
+Cell[7958, 211, 183, 3, 67, "Section",ExpressionUUID->"3ace0394-c053-4c68-84eb-a4407a7cb6e5"],
+Cell[8144, 216, 368, 8, 34, "Text",ExpressionUUID->"b683e5ef-1cc0-49da-be5d-95fe9eac5514"],
+Cell[CellGroupData[{
+Cell[8537, 228, 226, 3, 28, "Input",ExpressionUUID->"be529e3b-13c3-487b-8b21-31fa9315b033"],
+Cell[8766, 233, 217, 5, 32, "Output",ExpressionUUID->"3589d148-1912-4288-bf2a-639b4a2e3858"]
+}, Open  ]],
+Cell[8998, 241, 727, 22, 37, "Text",ExpressionUUID->"2ecc2768-d81d-45c9-9946-0ed0f5a722b9"]
 }, Open  ]]
 }, Open  ]]
 }
